@@ -1,108 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tong Xing — Postdoctoral Researcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Tong Xing — Postdoctoral Researcher at the University of Edinburgh (ICSA). Research: Operating systems, virtualization, heterogeneous memory, and heterogeneous-ISA systems." />
 
-<!DOCTYPE html>
-<html>
+  <!-- Canonical -->
+  <link rel="canonical" href="https://123toorc.github.io/" />
 
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <link rel="stylesheet" href="/assets/css/main.css">
-
-        <h1 class="post-headline">Tong Xing</h1>
-        <h3 class="post-description">PhD Student @ UoE</h3>
-
-        
-        <div class="links scroll">    
-        <a href="/CV.pdf">CV</a>
-</div>
-<hr>
-
-        <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title> Tong Xing | PhD Student</title>
-<meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="Tong Xing" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="PhD Student" />
-<meta property="og:description" content="PhD Student" />
-<link rel="canonical" href="/" />
-<meta property="og:url" content="/" />
-<meta property="og:site_name" content="Tong Xing" />
-<meta property="og:type" content="website" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"PhD Student","headline":"Tong Xing","name":"Tong Xing","url":"/"}</script>
-<!-- End Jekyll SEO tag -->
-
-
-        <!-- Generated using https://favicon.io/ -->
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?">
-<link rel="manifest" href=site.webmanifest">
-
-
-        <!-- MathJax -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-     processEscapes: true
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #111318;
+      --ink: #e6e8ef;
+      --muted: #a8b0c3;
+      --link: #7aa2ff;
+      --accent: #3ddc97;
+      --maxw: 980px;
     }
-  });
-</script>
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, #121522 0%, #0b0c10 55%) no-repeat, var(--bg);
+      color: var(--ink);
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
+    /* Header / hero */
+    header { position: sticky; top: 0; backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg), transparent 60%);
+      border-bottom: 1px solid #1e2233; z-index: 10; }
+    .hero { display: grid; gap: 10px; padding: 12px 0 10px; }
+    .name { font-size: clamp(28px, 5.5vw, 44px); margin: 0; letter-spacing: 0.3px; }
+    .subtitle { margin: 0; color: var(--muted); font-weight: 600; }
+    .quick { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px; border: 1px solid #2b3149;
+      padding: 6px 10px; border-radius: 999px; color: var(--ink); background: #121522;
+    }
 
-        <!-- Load fontawesome here for faster loadtimes: https://stackoverflow.com/a/35880730/9523246 -->
-        <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.11.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+    /* About layout: text + photo side-by-side */
+    section { background: var(--card); border: 1px solid #1f2436; border-radius: 16px; padding: 20px; margin: 20px 0; }
+    h2 { margin: 0 0 10px; font-size: 22px; letter-spacing: .2px; }
+    h3 { margin: 16px 0 6px; font-size: 18px; }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin: 6px 0; }
 
-    </head>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr; /* text | image */
+      gap: 16px;
+      align-items: start;
+    }
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #1f2436;
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
 
-    <body>
-        <main>
-            <article>
-                
-    
-      <img class="profile right"  width="100" height="137" src="/profile.png">
-    
+    /* Publications counter */
+    .pubs { counter-reset: pub; list-style: none; margin: 0; padding: 0; }
+    .pubs > li { counter-increment: pub; margin: 14px 0; }
+    .pubs > li::before {
+      content: "[" counter(pub) "]"; color: var(--accent); font-weight: 700; display: inline-block; width: 2ch;
+      margin-right: 10px;
+    }
 
+    .footer { color: var(--muted); font-size: 14px; text-align: center; padding: 30px 0; }
+    .muted { color: var(--muted); }
+  </style>
 
-<p>I’m a PhD student in the <a href="https://web.inf.ed.ac.uk/icsa">Institute for Computing Systems Architecture</a> at <a href="https://www.ed.ac.uk/">The University of Edinburgh</a>, supervised by <a href="http://www.barbalace.it/antonio/">Dr. Antonio Barbalace</a>. 
-</p>
-<p> My current research interests are in the fields of system software -> Operating System, Virtualization environments. </p>
-<p> 邢通，一名较为英俊的年轻人，来自美丽的四川</p>
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Tong Xing",
+    "jobTitle":"Postdoctoral Researcher",
+    "affiliation":{
+      "@type":"CollegeOrUniversity",
+      "name":"The University of Edinburgh",
+      "department":"Institute for Computing Systems Architecture (ICSA)"
+    },
+    "url":"https://123toorc.github.io/",
+    "email":"mailto:Tong.Xing@ed.ac.uk",
+    "sameAs":["https://github.com/123toorc"]
+  }
+  </script>
+</head>
+    <meta name="google-site-verification" content="qxCY9hKxakoFbmiptmbdQ_VlI4CqZlKEgdCXPSPl0iI" />
+<body>
+  <header>
+    <div class="wrap">
+      <div class="hero">
+        <h1 class="name">Tong Xing</h1>
+        <p class="subtitle">Postdoctoral Researcher, ICSA, The University of Edinburgh</p>
+      </div>
+    </div>
+  </header>
 
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>I’m a systems researcher working on operating systems and virtualization for next-generation data-center. My recent work explores new inter-connection technology (e.g., CXL).</p>
 
-            </article>
-        </main>
+          <h2>Contact</h2>
+          <p><strong>Email:</strong> <a href="mailto:Tong.Xing@ed.ac.uk">Tong.Xing@ed.ac.uk</a></p>
+          <p><strong>Address:</strong> Informatics Forum, 10 Crichton Street, Edinburgh EH8 9AB, UK</p>
+        </div>
 
-        <footer>
-          <p class="copy">
-            <small> &copy; Tong Xing 2025
-                    | Last updated on Jan 2025
-            </small>
-          </p>
+        <figure class="about-photo">
+          <img src="/profile.png" alt="Tong Xing" />
+        </figure>
+      </div>
+    </section>
 
-        <div class="rounded-social-buttons"><a title=""
-class="social-button email" itemprop="email"
-href="mailto:Tong.Xing@ed.ac.uk" target="_blank">
-<i class="far fa-envelope"></i>
-</a><a title=""
-class="social-button github"
-href="https://www.github.com/123toorc" itemprop="sameAs"
-target="_blank">
-<i class="fab fa-github"></i>
-</a></div>
+    <section id="interests">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Operating systems, Virtualization</li>
+        <li>Heterogeneous-ISA platforms</li>
+        <li>Multi-tiered memory e.g. Memory Tiering</li>
+        <li>Software Managed Cache Coherence e.g. DSM</li>
+      </ul>
+    </section>
 
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <ol class="pubs">
+        <li>
+          <a href="https://dl.acm.org/doi/10.1145/3676641.3716275">
+            <strong>T. Xing</strong>, C. Xiong, T. Wei, J. Balkind, B. Ravindran, A. Sanchez, A. Barbalace.
+            <br/><strong>Stramash: A Fused Kernel Operating System For Cache-Coherent, Heterogeneous-ISA Systems.</strong>
+            <em>ASPLOS ’25</em>
+          </a>
+        </li>
 
-        </footer>
+        <li>
+          <a href="https://hcds-workshop.github.io/edition/2025/">
+            <strong>T. Xing</strong>, A. Barbalace.
+            <br/><strong>Rethinking Applications' Address Space with CXL shared memory pools</strong>
+            <em>HCDS ’25</em>
+          </a>
+        </li>
 
-        <!-- Google Analytics Tracking code -->
-<script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
-<script>
-var galite = galite || {};
-galite.UA = '';
-</script>
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3652892.3700752">
+            D. Mvondo, <strong>T. Xing</strong>, A. Barbalace.
+            <br/><strong>UTwinVM: Reliable hints on the effects of hypervisor updates on VMs in the Cloud.</strong>
+            <em>Middleware ’24</em>
+          </a>
+        </li>
 
-    </body>
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3620678.3624649">
+            <strong>T. Xing</strong>, C. Xiong, J. Picorel, Y. Chuan, A. Barbalace.
+            <br/><strong>Maximizing VMs’ I/O Performance on Overcommitted CPUs with Fairness.</strong>
+            <em>SoCC ’23</em>
+          </a>
+        </li>
 
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3552326.3587452">
+            H. Chuang*, K. Manaouil*, <strong>T. Xing*</strong>, A. Barbalace, P. Olivier, B. Heerekar, B. Ravindran.
+            <br/><strong>Aggregate VM: Why Reduce or Evict VM’s Resources When You Can Borrow Them From Other Nodes.</strong>
+            <em>EuroSys ’23</em> (Co-first author)
+          </a>
+        </li>
+
+        <li>
+          <a href="https://doi.org/10.1145/3546591.3547528">
+            <strong>T. Xing</strong>, H. Tajbakhsh, I. Haque, M. Honda, A. Barbalace.
+            <br/><strong>Towards Portable End-to-End Network Performance Characterization of SmartNICs.</strong>
+            <em>APSys ’22</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3524452">
+            <strong>T. Xing</strong>, A. Barbalace, P. Olivier, M.L. Karaoui, W. Wang, B. Ravindran.
+            <br/><strong>H-Container: Enabling Heterogeneous-ISA Container Migration in Edge Computing.</strong>
+            <em>ACM TOCS</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3381052.3381321">
+            A. Barbalace, M.L. Karaoui, W. Wang, <strong>T. Xing</strong>, P. Olivier, B. Ravindran.
+            <br/><strong>Edge computing: the case for heterogeneous-ISA container migration.</strong>
+            <em>VEE ’20</em>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section id="talks">
+      <h2>Tutorials &amp; Presentations</h2>
+
+      <h3>UK Systems Research Workshop</h3>
+      <ul>
+        <li><a href="https://uksystems.org/workshop/2021/">Characterizing SmartNIC Architectures</a></li>
+        <li><a href="https://uksystems.org/workshop/2023/">Maximize the I/O performance of overcommitted VM</a></li>
+      </ul>
+
+      <h3>H-Container Tutorial</h3>
+      <ul>
+        <li><a href="https://github.com/systems-nuts/hcontainer-tutorial">H-Container support for Docker on local testbed and AWS</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Gj9L169hg50&t=2s&ab_channel=PopcornLinux">Tutorial demo</a></li>
+      </ul>
+
+      <h3>
+          Programming Heterogeneous-ISA Platforms with Popcorn Linux OS and Compiler Framework)
+        </a>
+      </h3>
+      <p>
+        <li><a href="https://sosp19.rcs.uwaterloo.ca/tutorials.html">Popcorn Tutorial(SOSP’19)</a>
+      </p></li>
+    </section>
+
+    <section id="service">
+      <h2>Service</h2>
+      <ul>
+        <li>PC, SoCC ’25</li>
+        <li>Shadow PC, EuroSys ’25</li>
+        <li>Student Volunteer, EuroSys ’21</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Linux kernel, KVM, containers (LXC/Docker)</li>
+        <li>QEMU, SmartNICs/DPUs, memory tiering (NUMA/CXL)</li>
+        <li>Languages: C, C++, Python, x86/ARM asm, Make, Shell</li>
+      </ul>
+    </section>
+
+    <p class="footer">邢通，一名较为英俊的年轻人，来自美丽的四川。</p>
+    <p class="footer">© Tong Xing 2025 · Last updated Aug 2025</p>
+  </main>
+</body>
 </html>
