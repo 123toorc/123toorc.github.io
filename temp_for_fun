@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tong Xing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Tong Xing — Postdoctoral Researcher at the University of Edinburgh (ICSA). Research: Operating systems, virtualization, heterogeneous memory, and heterogeneous-ISA systems." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://123toorc.github.io/" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #111318;
+      --ink: #e6e8ef;
+      --muted: #a8b0c3;
+      --link: #7aa2ff;
+      --accent: #3ddc97;
+      --maxw: 980px;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, #121522 0%, #0b0c10 55%) no-repeat, var(--bg);
+      color: var(--ink);
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* Header / hero */
+    header { position: sticky; top: 0; backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg), transparent 60%);
+      border-bottom: 1px solid #1e2233; z-index: 10; }
+    .hero { display: grid; gap: 10px; padding: 12px 0 10px; }
+    .name { font-size: clamp(28px, 5.5vw, 44px); margin: 0; letter-spacing: 0.3px; }
+    .subtitle { margin: 0; color: var(--muted); font-weight: 600; }
+    .quick { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px; border: 1px solid #2b3149;
+      padding: 6px 10px; border-radius: 999px; color: var(--ink); background: #121522;
+    }
+
+    /* About layout: text + photo side-by-side */
+    section { background: var(--card); border: 1px solid #1f2436; border-radius: 16px; padding: 20px; margin: 20px 0; }
+    h2 { margin: 0 0 10px; font-size: 22px; letter-spacing: .2px; }
+    h3 { margin: 16px 0 6px; font-size: 18px; }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin: 6px 0; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr; /* text | image */
+      gap: 16px;
+      align-items: start;
+    }
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #1f2436;
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Publications counter */
+    .pubs { counter-reset: pub; list-style: none; margin: 0; padding: 0; }
+    .pubs > li { counter-increment: pub; margin: 14px 0; }
+    .pubs > li::before {
+      content: "[" counter(pub) "]"; color: var(--accent); font-weight: 700; display: inline-block; width: 2ch;
+      margin-right: 10px;
+    }
+
+    .footer { color: var(--muted); font-size: 14px; text-align: center; padding: 30px 0; }
+    .muted { color: var(--muted); }
+  </style>
+
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Tong Xing",
+    "jobTitle":"Postdoctoral Researcher",
+    "affiliation":{
+      "@type":"CollegeOrUniversity",
+      "name":"The University of Edinburgh",
+      "department":"Institute for Computing Systems Architecture (ICSA)"
+    },
+    "url":"https://123toorc.github.io/",
+    "email":"mailto:Tong.Xing@ed.ac.uk",
+    "sameAs":["https://github.com/123toorc"]
+  }
+  </script>
+   <meta name="google-site-verification" content="qxCY9hKxakoFbmiptmbdQ_VlI4CqZlKEgdCXPSPl0iI" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="hero">
+        <h1 class="name">Tong Xing</h1>
+        <p class="subtitle">Postdoctoral Researcher, ICSA, The University of Edinburgh</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>I am a systems researcher focus on operating systems and virtualization for next-generation data centers. My recent work focuses on emerging interconnect technologies such as CXL.</p>
+          <p>I earned my PhD from the University of Edinburgh -- viva comittee: Dr. Daniel S. Berger(MSR) and Dr. Luo Mai(UoE)</p>
+          <p>I was proudly supervised by <a href="https://www.barbalace.it/antonio/">Dr. Antonio Barbalace</a>, who has guided my italian food cooking, english accent, life style and research since my master’s studies in the USA. I completed my bachelor’s degree in China.</p>
+
+          <h2>Contact</h2>
+          <p><strong>Email:</strong> <a href="mailto:Tong.Xing@ed.ac.uk">Tong.Xing@ed.ac.uk</a></p>
+          <p><strong>Address:</strong> Informatics Forum, 10 Crichton Street, Edinburgh EH8 9AB, UK</p>
+        </div>
+
+        <figure class="about-photo">
+          <img src="/profile_fun.jpg" alt="Tong Xing" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Operating systems, Virtualization</li>
+        <li>Heterogeneous-ISA platforms</li>
+        <li>Multi-tiered memory e.g. Memory Tiering</li>
+        <li>Software Managed Cache Coherence e.g. DSM</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li>
+          <a href="https://dl.acm.org/doi/10.1145/3772052.3772213">
+            <strong>T. Xing</strong>, J. Yang, J. Picorel, A. Barbalace.
+            <br/><strong>Rethinking Tiered Memory Management in Cloud Data Centers(like)</strong>
+            <em>SoCC ’25</em>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://dl.acm.org/doi/10.1145/3676641.3716275">
+            <strong>T. Xing</strong>, C. Xiong, T. Wei, J. Balkind, B. Ravindran, A. Sanchez, A. Barbalace.
+            <br/><strong>Stramash: A Fused Kernel Operating System For Cache-Coherent, Heterogeneous-ISA Systems(My Phd)</strong>
+            <em>ASPLOS ’25</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/10.1145/3723851.3723858">
+            <strong>T. Xing</strong>, A. Barbalace.
+            <br/><strong>Rethinking Applications' Address Space with CXL shared memory pools(cool)</strong>
+            <em>HCDS ’25</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3652892.3700752">
+            D. Mvondo, <strong>T. Xing</strong>, A. Barbalace.
+            <br/><strong>UTwinVM: Reliable hints on the effects of hypervisor updates on VMs in the Cloud(Djob is my best friend)</strong>
+            <em>Middleware ’24</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3620678.3624649">
+            <strong>T. Xing</strong>, C. Xiong, J. Picorel, Y. Chuan, A. Barbalace.
+            <br/><strong>Maximizing VMs’ I/O Performance on Overcommitted CPUs with Fairness(Best time in Edinburgh, Cong! My best friend)</strong>
+            <em>SoCC ’23</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3552326.3587452">
+            H. Chuang*, K. Manaouil*, <strong>T. Xing*</strong>, A. Barbalace, P. Olivier, B. Heerekar, B. Ravindran.
+            <br/><strong>Aggregate VM: Why Reduce or Evict VM’s Resources When You Can Borrow Them From Other Nodes(I reproduce the GiantVM.. When I'm in the hotel at Xiamen(During Lockdown of Covid, and I type with 2ms delay, China, ahahahah)</strong>
+            <em>EuroSys ’23</em> (Co-first author)
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/10.1145/3546591.3547528">
+            <strong>T. Xing</strong>, H. Tajbakhsh, I. Haque, M. Honda, A. Barbalace.
+            <br/><strong>Towards Portable End-to-End Network Performance Characterization of SmartNICs(I like Michio! Best friend, Best beer!)</strong>
+            <em>APSys ’22</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3524452">
+            <strong>T. Xing</strong>, A. Barbalace, P. Olivier, M.L. Karaoui, W. Wang, B. Ravindran.
+            <br/><strong>H-Container: Enabling Heterogeneous-ISA Container Migration in Edge Computing.Q</strong>
+            <em>ACM TOCS</em>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3381052.3381321">
+            A. Barbalace, M.L. Karaoui, W. Wang, <strong>T. Xing</strong>, P. Olivier, B. Ravindran.
+            <br/><strong>Edge computing: the case for heterogeneous-ISA container migration.</strong>
+            <em>VEE ’20</em>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section id="talks">
+      <h2>Tutorials &amp; Presentations</h2>
+
+      <h3>UK Systems Research Workshop</h3>
+      <ul>
+        <li><a href="https://uksystems.org/workshop/2021/">Characterizing SmartNIC Architectures</a></li>
+        <li><a href="https://uksystems.org/workshop/2023/">Maximize the I/O performance of overcommitted VM</a></li>
+      </ul>
+
+      <h3>H-Container Tutorial</h3>
+      <ul>
+        <li><a href="https://github.com/systems-nuts/hcontainer-tutorial">H-Container support for Docker on local testbed and AWS</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Gj9L169hg50&t=2s&ab_channel=PopcornLinux">Tutorial demo</a></li>
+      </ul>
+
+      <h3>
+          Programming Heterogeneous-ISA Platforms with Popcorn Linux OS and Compiler Framework)
+        </a>
+      </h3>
+      <p>
+        <li><a href="https://sosp19.rcs.uwaterloo.ca/tutorials.html">Popcorn Tutorial(SOSP’19)</a>
+      </p></li>
+    </section>
+
+    <section id="service">
+      <h2>Service</h2>
+      <ul>
+        <li>PC, SoCC ’25</li>
+        <li>Shadow PC, EuroSys ’25</li>
+        <li>Student Volunteer, EuroSys ’21</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Linux kernel, KVM, containers (LXC/Docker)</li>
+        <li>QEMU, SmartNICs/DPUs, memory tiering (NUMA/CXL)</li>
+        <li>Languages: C, C++, Python, x86/ARM asm, Make, Shell</li>
+      </ul>
+    </section>
+
+    <p class="footer">邢通，一名较为英俊的年轻人，来自美丽的四川。</p>
+    <p class="footer">© Tong Xing 2025 · Last updated Aug 2025</p>
+  </main>
+</body>
+</html>
